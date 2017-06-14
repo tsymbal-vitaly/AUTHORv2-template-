@@ -1,0 +1,11 @@
+body {
+  background-color: blueviolet;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.container {
+  background-color: red;
+  color: aqua;
+  font-size: 20px; }
