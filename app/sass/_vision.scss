@@ -1,0 +1,108 @@
+//    vision start
+.vision {
+    @media screen and (max-width: $break_sm) {
+        padding-top: 54px;
+    }
+}
+
+.carousel {
+    position: relative;
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: .3s;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 100;
+        &:hover,
+        &:active {
+            box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .75);
+        }
+        @media screen and (max-width: $break_sm) {
+            width: 35px;
+            height: auto;
+            top: 25%;
+        }
+    }
+    .arrow-left {
+        left: 25px;
+        @media screen and (max-width: $break_sm) {
+            left: 10px;
+        }
+    }
+    .arrow-right {
+        right: 25px;
+        @media screen and (max-width: $break_sm) {
+            right: 10px;
+        }
+    }
+    .slide-item {
+        position: relative;
+        outline: none;
+        .overlay {
+            background-color: rgba(68, 192, 194, .3);
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: $white;
+            padding: 40px 0;
+            @media screen and (max-width: $break_sm) {
+                position: inherit;
+                top: 100%;
+                transform: translate(-50%, 0);
+            }
+            h1 {
+                text-shadow: 0.1px 1px 0 rgba($black, 0.16);
+                font-size: 63px;
+                font-weight: 600;
+                line-height: 24px;
+                margin: 0 0 49px;
+                @media screen and (max-width: $break_lg) {
+                    font-size: 50px;
+                    margin: 0 0 20px;
+                }
+            }
+            p {
+                font-size: 23px;
+                font-weight: 400;
+                line-height: 37px;
+                margin: 0 0 75px;
+                @media screen and (max-width: $break_lg) {
+                    font-size: 18px;
+                    margin: 0 0 30px;
+                }
+            }
+            a {
+                color: $white;
+                font-size: 26px;
+                font-weight: 600;
+                line-height: 24px;
+                text-decoration: none;
+                border: 2px solid $white;
+                border-radius: 4px;
+                padding: 14px 40px;
+                transition: .3s;
+                outline: none;
+                &:hover {
+                    box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .75);
+                }
+                @media screen and (max-width: $break_lg) {
+                    font-size: 20px;
+                    padding: 10px 30px;
+                }
+            }
+        }
+    }
+}
+
+//    vision end

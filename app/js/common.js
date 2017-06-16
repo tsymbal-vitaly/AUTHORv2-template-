@@ -1,6 +1,7 @@
 jQuery(function() {
     initAnimationButton();
     initmobileMenu();
+    initCarousel();
 });
 
 //  Mobile menu button animation
@@ -57,7 +58,7 @@ jQuery(window).scroll(function () {
     })
 });
 
-$("nav").on("click", "a", function (event) {
+jQuery("nav").on("click", "a", function (event) {
     //  Exclude the standard browser response
     event.preventDefault();
 
@@ -72,3 +73,17 @@ $("nav").on("click", "a", function (event) {
         scrollTop: top
     }, 1000);
 });
+
+//  Carousel unit vision Slick.js
+function initCarousel() {
+    $('.carousel').slick({
+        autoplay: false,
+        autoplaySpeed: 3000,
+        fade: true,
+        pauseOnHover: true,
+        cssEase: 'linear',
+        arrows: true,
+        prevArrow:'<img class="arrow-left" src="img/left.png" alt="left">',
+        nextArrow:'<img class="arrow-right" src="img/right.png" alt="right">'
+    });
+}

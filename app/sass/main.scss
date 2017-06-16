@@ -9,7 +9,7 @@ body {
     font-size: $main_font-size;
     line-height: $main_line-height;
     background-color: $white;
-    overflow-x: hidden;
+//    overflow-x: hidden;
 }
 
 .container {
@@ -17,3 +17,4 @@ body {
 }
 
 @import"header";
+@import"vision";
