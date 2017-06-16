@@ -42,6 +42,7 @@
         float: left;
         @media screen and (max-width: $break_sm){
             float: none;
+            text-align: center;
         }
         a {
             display: block;

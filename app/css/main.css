@@ -312,6 +312,7 @@ button span {
 
   .header li {
     float: none;
+    text-align: center;
   }
 
   .header li a {
