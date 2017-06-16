@@ -1,0 +1,19 @@
+@import"app/libs/smart-grid/smart-grid";
+@import"variables";
+
+@include reset();
+
+body {
+    font-family: $main_font-family;
+    font-weight: $font-weight_normal;
+    font-size: $main_font-size;
+    line-height: $main_line-height;
+    background-color: $white;
+    overflow-x: hidden;
+}
+
+.container {
+    @include wrapper();
+}
+
+@import"header";

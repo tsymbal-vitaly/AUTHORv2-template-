@@ -25,8 +25,8 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
-//        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-//        'app/libs/slick-1.6.0/slick/slick.js',
+        'app/libs/Headhesive.js/dist/headhesive.min.js',
+        'app/libs/slick-1.6.0/slick/slick.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -86,6 +86,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
     var buildCss = gulp.src([
         'app/css/main.css',
         'app/css/libs.min.css',
+        'app/css/font-awesome.css',
     ])
     .pipe(gulp.dest('dist/css'));
     

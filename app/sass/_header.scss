@@ -1,0 +1,153 @@
+//    header start
+.header {
+    @include clearfix();
+    background-color: $white;
+    transition: .5s;
+    @media screen and (max-width: $break_sm){
+        position: fixed;
+        width: 100%;
+    }
+    #logo {
+        display: inline-block;
+        text-decoration: none;
+        margin: 35px 0 0;
+        transition: .5s;
+        @include logotype;
+        
+        @media screen and (max-width: $break_sm){
+            margin: 15px 0;
+        }
+    }
+    nav {
+        float: right;
+        margin-right: -20px;
+        @media screen and (max-width: $break_sm){
+            width: 100%;
+            float: none;
+            margin-right: 0;
+        }
+    }
+    .navlist {
+        @media screen and (max-width: $break_sm){
+            display: none;
+        }
+    }
+    li+li {
+        margin-left: 15px;
+        @media screen and (max-width: $break_sm){
+            margin-left: 0;
+        }
+    }
+    li {
+        float: left;
+        @media screen and (max-width: $break_sm){
+            float: none;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            transition: all .3s linear;
+            border-bottom: 2px solid transparent;
+            color: #484c55;
+            padding: 37px 20px;
+            &:hover {
+                color: #44c0c2;
+                background-color: #f8f9fb;
+                border-bottom: 2px solid #44c0c2;
+            }
+            @media screen and (max-width: $break_sm){
+                padding: 15px 20px;
+            }
+        }
+        .active {
+            color: #44c0c2;
+            background-color: #f8f9fb;
+            border-bottom: 2px solid #44c0c2;
+        }
+    }
+}
+
+.headhesive {
+    background-color: $white;
+    position: fixed;
+    width: 100%;
+    transition: .5s;
+}
+
+.headhesive--stick {
+    #logo {
+        margin: 13px 0 0;
+    }
+    li {
+        a {
+            padding: 15px 20px;
+        }
+    }
+}
+
+//    Mobile menu button
+button {
+    display: none; //display: block;
+    margin: 0 16px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    @media screen and (max-width: $break_sm) {
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: 15px;
+        margin: 0;
+    }
+    span {
+        display: block;
+    }
+}
+
+.grid-button {
+    padding: $base*2;
+    cursor: pointer;
+    user-select: none;
+    .grid {
+        width: $base/1.5;
+        height: $base/1.5;
+        background: $color;
+        color: $color;
+        border-radius: 50%;
+        transition: $transition-button;
+    }
+}
+
+.grid-button.close {
+    .grid {
+        -webkit-transform: rotate3d(0, 0, 1, -45deg) scale3d(.8, .8, .8);
+        transform: rotate3d(0, 0, 1, -45deg) scale3d(.8, .8, .8);
+    }
+}
+
+.grid-button.rearrange {
+    .grid {
+        box-shadow: -($base+$space) 0 -($base+$space), 0 0 -($base+$space), ($base+$space) (-($base + $space)), -($base+$space) 0, $base+$space 0, -($base+$space) ($base + $space), 0 ($base+$space), ($base+$space) ($base + $space);
+    }
+}
+
+.grid-button.rearrange.close {
+    .grid {
+        box-shadow: 0 0 -$base, 0 0 -$base*2, $base 0, -$base*2 0, $base*2 0, -$base 0, 0 $base*2, 0 $base;
+    }
+}
+
+.grid-button.collapse {
+    .grid {
+        box-shadow: -($base+$space) 0, -($base+$space) ($base+$space), $base+$space 0, ($base+$space) (-($base+$space)), 0 0 -($base+$space), -($base+$space) 0 -($base+$space), 0 ($base+$space), ($base+$space) ($base+$space);
+    }
+}
+
+.grid-button.collapse.close {
+    .grid {
+        box-shadow: -$base 0, 0 0 transparent, $base 0, 0 0 transparent, 0 0 -$base, 0 0 transparent, 0 $base, 0 0 transparent;
+    }
+}
+
+//    header end

@@ -1,0 +1,33 @@
+$main_font-family: 'Open Sans', sans-serif;
+$main_font-size: 15px;
+$main_line-height: 24px;
+$font-weight_normal: 400;
+$font-weight_semibold: 600;
+$font-weight_extrabold: 800;
+
+$white: #fff;
+$black: #000;
+
+//   MENU BUTTON
+$color: #44c0c2;
+$transition-button: all .3s linear;
+$base: 10px;
+$space: $base/4;
+
+@mixin logotype {
+    color: #44c0c2;
+    font-family: 'Lobster', cursive;
+    font-size: 43px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.section2,
+.section3,
+.section4,
+.section5,
+.section6,
+.vision {
+    height: 1000px;
+}
+

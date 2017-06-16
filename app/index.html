@@ -16,16 +16,31 @@
 <body>
     <!-- Start of code -->
     <div id="wrapper">
-        <header id="header">
-            
-        </header>
-        <main>
-            <div class="section"></div>
-            <div class="section"></div>
-            <div class="section"></div>
-            <div class="section"></div>
-        </main>
-        <footer id="footer">
+        <header class="header">
+            <div class="container">
+                <a href="#home" id="logo" title="Author">Author</a>
+                <nav>
+                    <button type="button" aria-label="Toggle Navigation" class="navToggle grid-button rearrange" title="Menu">
+                        <span class="grid"></span>
+                    </button>
+                    <ul class="navlist">
+                        <li><a class="active" href="#home">Home</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul> <!-- /.nav end -->
+                </nav> <!-- /nav end -->
+            </div> <!-- /.container end -->
+        </header> <!-- /header end -->
+        <div class="vision section nav" id="home" style="background:grey"></div>
+        <div class="section section2 nav" style="background:yellow" id="service"></div>
+        <div class="section section3 nav" style="background:green" id="portfolio"></div>
+        <div class="section section4 nav" style="background:blue" id="team"></div>
+        <div class="section section5 nav" style="background:pink" id="blog"></div>
+        <div class="section section6 nav" style="background:orange" id="contact"></div>
+        <footer class="footer">
             
         </footer>
     </div>
